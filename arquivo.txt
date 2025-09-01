@@ -1,0 +1,129 @@
+
+C:\Users\Celio>mkdir aula08
+
+C:\Users\Celio>cd aula08
+
+C:\Users\Celio\aula08>git init
+Initialized empty Git repository in C:/Users/Celio/aula08/.git/
+
+C:\Users\Celio\aula08>npm install touch-cli -g
+
+added 2 packages in 6s
+
+C:\Users\Celio\aula08>touch arquivo.txt
+Touching arquivo.txt
+
+C:\Users\Celio\aula08>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        arquivo.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\Celio\aula08>git add arquivo.txt
+
+C:\Users\Celio\aula08>git branch
+
+C:\Users\Celio\aula08>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   arquivo.txt
+
+
+C:\Users\Celio\aula08>git commit -m "meu primeiro commit"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Celio@DESKTOP-EPEFP7E.(none)')
+
+C:\Users\Celio\aula08>git config --global user.email "celiocvilela70@gmail.com"
+
+C:\Users\Celio\aula08>git config --global user.name "CelioViela"
+
+C:\Users\Celio\aula08>git commit -m "meu primeiro commit"
+[master (root-commit) 40bc5e3] meu primeiro commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 arquivo.txt
+
+C:\Users\Celio\aula08>git branch
+* master
+
+C:\Users\Celio\aula08>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\Users\Celio\aula08>git branch Filha
+
+C:\Users\Celio\aula08>git branch
+  Filha
+* master
+
+C:\Users\Celio\aula08>git checkout Filha
+Switched to branch 'Filha'
+
+C:\Users\Celio\aula08>git branch
+* Filha
+  master
+
+C:\Users\Celio\aula08>git branch Filha2
+
+C:\Users\Celio\aula08>git branch
+* Filha
+  Filha2
+  master
+
+C:\Users\Celio\aula08>git branch Filha2
+fatal: a branch named 'Filha2' already exists
+
+C:\Users\Celio\aula08>git checkout Filha2
+Switched to branch 'Filha2'
+
+C:\Users\Celio\aula08>git branch
+  Filha
+* Filha2
+  master
+
+C:\Users\Celio\aula08>git branch -D Filha
+Deleted branch Filha (was 40bc5e3).
+
+C:\Users\Celio\aula08>git branch
+* Filha2
+  master
+
+C:\Users\Celio\aula08>git checkout master
+Switched to branch 'master'
+
+C:\Users\Celio\aula08>git branch Filha
+
+C:\Users\Celio\aula08>git branch
+  Filha
+  Filha2
+* master
+
+C:\Users\Celio\aula08>git merge
+fatal: No remote for the current branch.
+
+C:\Users\Celio\aula08>git merge Filha
+Already up to date.
+
+C:\Users\Celio\aula08>git merge Filha2
+Already up to date.
+
+C:\Users\Celio\aula08>
