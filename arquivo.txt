@@ -165,5 +165,61 @@ C:\Users\Celio\aula08>git branch
   Filha2
 * master
 
+C:\Users\Celio\aula08>git push
+fatal: The current branch Filha has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin Filha
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+C:\Users\Celio\aula08>git push --set-upstream origin Filha
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 1.13 KiB | 164.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'Filha' on GitHub by visiting:
+remote:      https://github.com/CelioVilela/aula-08-git-lab/pull/new/Filha
+remote:
+To https://github.com/CelioVilela/aula-08-git-lab
+ * [new branch]      Filha -> Filha
+branch 'Filha' set up to track 'origin/Filha'.
+
+C:\Users\Celio\aula08>git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+C:\Users\Celio\aula08>git merge Filha
+Auto-merging arquivo.txt
+CONFLICT (content): Merge conflict in arquivo.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+C:\Users\Celio\aula08>git add .
+
+C:\Users\Celio\aula08>git commit -m "Resolvido"
+[master 2d2f0e6] Resolvido
+
+C:\Users\Celio\aula08>gti merge Filha
+'gti' não é reconhecido como um comando interno
+ou externo, um programa operável ou um arquivo em lotes.
+
+C:\Users\Celio\aula08>git merge Filha
+Already up to date.
+
+C:\Users\Celio\aula08>git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 721 bytes | 144.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/CelioVilela/aula-08-git-lab
+   44d09d2..2d2f0e6  master -> master
 
 C:\Users\Celio\aula08>
